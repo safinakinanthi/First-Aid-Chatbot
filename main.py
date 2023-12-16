@@ -4,15 +4,14 @@ import numpy as np
 import random
 import tensorflow as tf
 from nltk.stem import LancasterStemmer
+from nltk.tokenize import word_tokenize
+
 stemmer = LancasterStemmer()
 
 
-from nltk.tokenize import word_tokenize
-
-# Load your pre-trained model (replace 'your_model.h5' with your actual model file)
 model = tf.keras.models.load_model('EngChatbotModel.h5')
 
-# Load your data from JSON (replace 'your_data.json' with your actual JSON file)
+
 with open('EnglishData.json', 'r') as file:
     data = json.load(file)
 
